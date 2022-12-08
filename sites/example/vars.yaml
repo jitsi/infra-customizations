@@ -1,0 +1,19 @@
+---
+asap_key: "{{asap_key_dev|default(default_asap_key)}}"
+#filter modules for dial out and jibri
+# prosody_enable_filter_iq_rayo: true
+callstats_app_id: 123456
+callstats_app_secret: example:example/example+M=
+environment_domain_name: "example.com"
+google_cloud_service_key_json: "{{google_cloud_service_key_json_stage}}"
+hcv_domain: example.com
+hcv_environment: example
+jibri_environments:
+  - name: "{{hcv_environment}}"
+    usage_timeout: 0
+# set jibri_local_domain blank to allow connection to multiple instances
+jitsi_meet_environment_type: dev
+jitsi_meet_signal_api_ssl_certificate: "{{ example_ssl_certificate }}{{ example_ssl_extras }}"
+jitsi_meet_signal_api_ssl_key_name: "{{ example_ssl_key }}"
+jitsi_meet_ssl_certificate: "{{example_ssl_certificate ~ example_ssl_extras }}"
+jitsi_meet_ssl_key_name: "{{ example_ssl_key }}"
